@@ -42,22 +42,22 @@
                 </tr>
             `;
 
-            var Unit = xmlDoc.getElementsByTagName("name");
-            var Type = xmlDoc.getElementsByTagName("price");
-            var Model = xmlDoc.getElementsByTagName("desc");
-            var Specification = xmlDoc.getElementsByTagName("calories");
+            var Name = xmlDoc.getElementsByTagName("name");
+            var Price = xmlDoc.getElementsByTagName("price");
+            var Desc = xmlDoc.getElementsByTagName("desc");
+            var Calories = xmlDoc.getElementsByTagName("calories");
 
             for (i = 0; i< Unit.length; i++) {
                 txt += `
                     <tr>
-                        <td>${Unit[i].childNodes[0].nodeValue}</td>
-                        <td>${Type[i].childNodes[0].nodeValue}</td>
-                        <td>${Model[i].childNodes[0].nodeValue}</td>
+                        <td>${Name[i].childNodes[0].nodeValue}</td>
+                        <td>${Price[i].childNodes[0].nodeValue}</td>
+                        <td>${Desc[i].childNodes[0].nodeValue}</td>
                         <td>
                             <ul>`;
                                 var list = "";
-                                for(j = 0; j < Specification.length;j++){
-                                    list += `<li>${Specification[i].children[j].childNodes[0].nodeValue}</li>`;
+                                for(j = 0; j < Calories.length;j++){
+                                    list += `<li>${Calories[i].children[j].childNodes[0].nodeValue}</li>`;
                                 }
 
                 txt +=`
